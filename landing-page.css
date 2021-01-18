@@ -1,0 +1,770 @@
+/* Utility classes  */
+
+:root {
+    --primary-color: #39B54A;
+    --secondary-color: #16697a;
+    --light-color: #cecece;
+    --link-color: #1C75BC;
+    --mediumDark-color: #c0c0c0;
+    /* --dark-color: #494949; */
+    --dark-color: #616060;
+    --black-color: #000000;
+    --max-width: 1336px;
+    --btn-orange: #F9C941;
+    --lighter-color: #f0fafa;
+    --btn-green-hover-color: linear-gradient(180deg, rgba(39, 226, 0, 1) 0%, rgba(0, 179, 12, 1) 100%);
+    --btn-orange-hover-color: linear-gradient(180deg, rgba(255, 242, 0, 1) 0%, rgba(252, 175, 23, 1) 100%);
+    /* --medium-color: #6d6d6d; */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background: #ebf5f7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#tendapa-logo {
+    width: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+button {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+button a:hover {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+select {
+    background: var(--lighter-color);
+}
+
+img {
+    width: 100%;
+}
+
+
+input[type='radio']:after {
+    width: 11px;
+    height: 11px;
+    border-radius: 20px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    /* background-color: #d1d3d1; */
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid var(--light-color);
+}
+
+input[type='radio']:checked:after {
+    width: 11px;
+    height: 11px;
+    border-radius: 20px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    background-color: var(--primary-color);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid var(--primary-color);
+}
+
+.current {
+    font-weight: 600 !important;
+}
+
+.button-link:hover {
+    text-decoration: none;
+}
+
+.main-container {
+    min-height: 75vh;
+}
+
+
+/* Header Navigation Bar */
+#main-nav {
+    background: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    max-height: 11.3vh;
+}
+
+#main-nav a {
+    color: #fff;
+}
+
+#main-nav .main-nav-wrap2-icons a:hover {
+    color: var(--primary-color);
+}
+
+.container {
+    width: var(--max-width);
+    margin: 0 auto;
+    overflow: hidden;
+    /* min-height: 100vh; */
+    display: block;
+    position: relative;
+}
+
+
+.main-nav-wrap-lp{
+margin: 18px 0px;
+}
+
+.tendapa-logo-lp{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main-nav-links-lp{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0px;
+    margin-top: -40px;
+    font-size: 14px;
+}
+
+.main-nav-links-lp ul li{
+    padding-left: 40px ;
+}
+
+/* .become-a-seller-button {
+    padding: 0 10px;
+    height: 25px;
+    color: #fff;
+    font-size:14px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(36, 208, 0, 1) 0%, rgba(0, 161, 11, 1) 100%);
+}
+
+.become-a-seller-button a {
+    text-decoration: none;
+}
+
+.become-a-seller-button button:hover {
+    background: var(--btn-green-hover-color);
+    border: none;
+} */
+
+
+
+/* Main home corousel */
+.swiper-container {
+    width: 1336px;
+    margin: 0 auto;
+    height: 40vh;
+    position: relative;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #000;
+    width: 40px;
+    opacity: 60%;
+}
+
+.slide-btn a {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    /* background: linear-gradient(180deg, rgba(36, 208, 0, 1) 0%, rgba(0, 161, 11, 1) 100%); */
+    color: var(--primary-color);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 550;
+}
+
+.swiper-slide .slide-btn-left a {
+    top: 70%;
+    left: 20%;
+
+}
+
+.swiper-slide .slide-btn-center a {
+    top: 70%;
+    left: 50%;
+}
+
+.slide-btn a:hover {
+    background: var(--btn-green-hover-color);
+    border: none;
+    color: #fff;
+}
+
+.swiper-wrapper a img {
+    margin: -5px 2px;
+    width: 1440px;
+}
+
+
+/* FeaturesA Section */
+
+.featuresA-container {
+    min-height: 250px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.featuresA-title {
+    color: var(--title-color);
+    background: #fff;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.featuresA-wrap {
+    display: grid;
+    height: 250px;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    margin-top: 2px;
+    grid-gap: 20px;
+    text-align: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    background: #fff;
+    padding: 1rem;
+}
+
+.featuresA-wrap img {
+    height: 230px;
+    width: 400px;
+}
+
+ .featuresA-text {
+    margin-top: 70px;
+}
+
+.featuresA-wrap .featuresA-text p {
+    padding-bottom: 30px;
+    line-height: 1.5rem;
+    font-size: 19px;
+    color: #000;
+    font-weight: 500;
+}
+
+.featuresA-wrap .featuresA-text button {
+    width: 50%;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(36, 208, 0, 1) 0%, rgba(0, 161, 11, 1) 100%);
+    border: none;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.featuresA-text a {
+    text-decoration: none;
+}
+
+#createaccount-button span {
+    font-size: 1.1rem;
+    font-weight: 550;
+    opacity: 100%;
+    color: #fff;
+}
+
+#createaccount-button:hover {
+    background: var(--btn-green-hover-color);
+}
+
+
+
+/* FeaturesB section */
+
+.featuresB-container {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+.featuresB-title {
+    color: var(--title-color);
+    background: #fff;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.featuresB-container .featuresB-wrap {
+    display: grid;
+    max-height: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    margin-top: 2px;
+    grid-gap: 2px;
+    text-align: center;
+    justify-items: center;
+    justify-content: space-evenly;
+
+}
+
+.featuresB-card {
+    min-height: 270px;
+    max-height: 350px;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+.featuresB-card img {
+    max-width: 260px;
+    max-height: 300px;
+    padding:  0.5rem 0.5rem;
+    margin-top: 5px;
+}
+
+.featuresB-card p {
+    font-size: 17px;
+    color: #000;
+    font-weight: 500;
+}
+
+/* FeaturesC Section */
+
+.featuresA-container-lp {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    max-height: fit-content;
+    position: relative;
+    text-align: center;
+}
+
+.featuresA-title-lp {
+    color: var(--title-color);
+    background: #fff;
+    padding: 0.5rem;
+    margin-bottom: 5px;
+}
+
+.featuresA-wrap-lp img{
+width: 70%;
+}
+
+.featuresA-card-lp {
+    max-height: fit-content;
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+.featuresA-button-lp button {
+    width: 20%;
+    height: 40px;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    border: none;
+    font-weight: 550;
+    text-decoration: none;
+    text-align: center;
+    margin: 15px auto 0px;
+    align-items: center;
+    background: linear-gradient(180deg, rgba(36, 208, 0, 1) 0%, rgba(0, 161, 11, 1) 100%);
+    /* background: linear-gradient(180deg, rgba(254, 224, 0, 1) 0%, rgba(252, 161, 0, 1) 100%); */
+
+}
+
+.featuresA-button-lp a {
+    text-decoration: none;
+}
+
+.featuresA-button-lp button:hover {
+    background: var(--btn-green-hover-color);
+    border: none;
+}
+
+
+/* What is Tendapa Section - Introduction */
+
+.intro-container {
+    max-height: 350px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: #dbedce;
+    padding: 4rem;
+}
+
+.intro-container .intro-title h3 {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.intro-container .intro-wrap p {
+    color: var(--dark-color);
+    font-size: 20px;
+    line-height: 2rem;
+}
+
+
+/* Email Subscription Request Section */
+
+.emailSub-form-wrap {
+    position: relative;
+    padding: 20px 30px;
+    margin: 20px auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.emailSub-form-group input {
+    padding: 7px 5px;
+    width: 300px;
+    border-radius: 6px;
+    border: #c7c7c7 1px solid;
+    color: var(--dark-color);
+    font-size: 14px;
+}
+
+.emailSub-form-group button {
+
+    padding: 7px 5px;
+    width: 200px;
+    background: #ccc;
+    border-radius: 6px;
+    border: #c7c7c7 1px solid;
+    cursor: pointer;
+    color: var(--dark-color);
+}
+
+.emailSub-form-group button:hover {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.emailSub-form-wrap .form-description {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--dark-color);
+}
+
+#emailSub-button span {
+    font-size: 15px;
+    font-weight: 550;
+}
+
+.emailSub-form-group .emailSub-disclaimer {
+    font-size: 12px;
+    color: #939393;
+    text-align: left;
+    padding-top: 5px;
+}
+
+
+/* Footer */
+
+.footer-container {
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    background: var(--secondary-color);
+}
+
+.footer-container .footer-content-wrap .footer-links {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container .footer-content-wrap .footer-links li a {
+    padding: 0 15px;
+    font-size: 13.5px;
+    color: #fff;
+}
+
+.footer-container .footer-copyright {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+}
+
+.socialbtns {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.socialbtns a {
+    text-decoration: none;
+}
+
+.socialbtns,
+.socialbtns ul,
+.socialbtns li {
+    padding: 0 10px;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+    color: #fff;
+}
+
+.socialbtns .fa:hover {
+    color: #000;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+
+/* Back to top Button */
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #ccc;
+    color: var(--dark-color);
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 10%;
+}
+
+#myBtn:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+}
+
+/* Become a seller  form - Landing Page*/
+
+.become-a-seller-container{
+        display: grid;
+        position: relative;
+        grid-template-columns: 6fr 6fr;
+        grid-gap: 0.2rem;
+        /* flex: 1; */
+    }
+
+    .submit-message{
+        font-size: 17px;
+        font-weight: 500;
+        margin: auto 0px;
+        text-align: center;
+    }
+
+    .first-graphics-lp{
+    margin-top: 100px;
+    position: relative;
+    text-align: center;
+    }
+
+    .first-graphics-lp p{
+    font-size: 22px;
+    font-weight: 500;
+    margin: auto 0px;
+    text-align: center;
+    line-height: 2rem;
+    }
+
+    .first-graphics-lp img{
+        position: relative;
+        width: 65%;
+        text-align: center;
+    }
+
+    .add-product-to-sell{
+        margin-top: 15px;
+    }
+    
+    .add-product-to-sell select{
+        margin-bottom: 5px;
+        padding: 7px 7px;
+        width: 30%;
+        border-radius: 6px;
+        border:var(--light-color) 1px solid;
+        color: #000;
+        font-size: 16px;
+        display: block;
+        width: 100%;
+    }
+    
+    .add-product-to-sell select:focus{
+        outline: none;
+        border: 2px solid var(--primary-color);
+        padding: 6px 6px;
+        
+    }
+
+
+    /* Become a seller form */
+
+.become-a-seller-container {
+    position: relative;
+    max-width:100%;
+    margin: 20px auto;
+}
+
+.become-a-seller-form-wrap {
+    margin-top: 5px;
+    padding: 20px 40px;
+    line-height: 30px;
+    background: #fff;
+}
+
+.become-a-seller-form {
+    position: relative;
+    display: block;
+}
+
+.become-a-seller-form label {
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+}
+
+.become-a-seller-label-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.become-a-seller-business-details label{
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.become-a-seller-business-details {
+    margin-top: 10px;
+}
+
+.become-a-seller-business-details input {
+    padding: 7px 7px;
+    width: 30%;
+    border-radius: 6px;
+    border: var(--mediumDark-color) 1px solid;
+    color: #000;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.become-a-seller-business-details input:focus {
+    outline: none;
+    border: 2px solid var(--primary-color);
+    padding: 6px 6px;
+}
+
+
+.bas-business-details-inputs label, .radio-input{
+    cursor: pointer;
+}
+
+
+#become-a-seller-submit-btn{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    background: linear-gradient(180deg, rgba(36, 208, 0, 1) 0%, rgba(0, 161, 11, 1) 100%);
+    border: none;
+    cursor: pointer;
+    display: block;
+    outline: none;
+    margin: 15px 0;
+    text-align: center;
+    padding: 5px;
+}
+
+#become-a-seller-submit-btn span {
+    font-size: 1.1rem;
+    font-weight: 550;
+    opacity: 100%;
+    color: #fff;
+}
+
+#become-a-seller-submit-btn:hover{
+    background: var(--btn-green-hover-color);
+}
+
+/* Add a product form */
+.product-category{
+    margin-bottom:20px;
+}
