@@ -1,0 +1,128 @@
+.main-container {
+    min-height: 50vh;
+}
+
+    #main-nav {
+        width: 100%;
+        height: fit-content;
+        z-index: 2;
+        position: sticky;
+        top: 0;
+    }
+
+    #tendapa-logo {
+        width: 100px;
+    }
+
+    
+    .tendapa-logo-lp{
+        display: inline-block;
+    }
+
+    .main-nav-wrap-lp{
+        width: 100%;
+        padding: 5px 10px;
+        margin: 5px 0px;
+    }
+
+    .main-nav-links-lp li{
+        font-size: 12px;
+        margin-top: 7px;
+        }
+
+    .container{
+        width:100%;
+    }
+
+    .swiper-container{
+        width: 100%;
+        margin: 0 auto;
+        height: 18vh;
+        margin: 0 auto;
+        position: relative;
+
+    }
+
+    .swiper-wrapper a img{
+      width: 100%;
+      margin: 0px;
+    }
+
+
+    .featuresB-container {
+        position: relative;
+        margin-top: 5px;
+    }
+
+    .featuresB-container p{
+        font-size: 10px;    
+    }
+
+    .featuresB-container h3,
+    .featuresA-container-lp h3,
+    .featuresA-container h3{
+        font-size: 15px;
+    }
+
+    .intro-container{
+        width:100%;
+        max-height:fit-content;
+        padding:15px 15px;
+        margin: 15px 0px;
+    }
+
+    .intro-container .intro-wrap p {
+        color: var(--dark-color);
+        font-size: 15px;
+        line-height: 1.5rem;
+    }
+    
+    .intro-container .intro-title h3 {
+        color: var(--dark-color);
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    .featuresB-card{
+        min-height: fit-content;
+        position: relative;
+    }
+
+    .featuresA-wrap {
+    width: fit-content;
+    }
+
+    .featuresA-wrap img {
+        height: 100%;
+        width: 80%
+    }
+
+    .featuresA-wrap .featuresA-text p {
+        padding-bottom: 20px;
+        line-height: 1.5rem;
+        font-size: 16px;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .featuresA-wrap {
+        display: grid;
+        height: fit-content;
+        grid-template-columns: repeat(1, 2fr);
+        position: relative;
+        margin-top: 2px;
+        grid-gap: 5px;
+        text-align: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        background: #fff;
+        padding: 1rem;
+    }
+    
+
+    .featuresA-container {
+        min-height:fit-content;
+        margin-top: 10px;
+    }
+
+
